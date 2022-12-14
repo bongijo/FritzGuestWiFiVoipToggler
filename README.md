@@ -17,7 +17,7 @@
   <a href='https://github.com/bongijo/FritzGuestWiFiVoipToggler/releases'>  
   <img src='https://img.shields.io/github/v/release/bongijo/FritzGuestWiFiVoipToggler?color=%23FDD835&label=version&style=for-the-badge'>
   </a>
-  <a href='https://github.com/bongijo/FritzGuestWiFiVoipToggler/blob/main/LICENSE'>
+  <a href='https://github.com/bongijo/FritzGuestWiFiVoipToggler/blob/master/LICENSE'>
   <img src='https://img.shields.io/github/license/bongijo/FritzGuestWiFiVoipToggler?style=for-the-badge'>
   </a>
 
@@ -49,7 +49,7 @@ But first, create a `.env` file filled up with the access parameters:
 Run the docker container:
 
 ```shell
-docker run -d ghcr.io/bongijo/FritzGuestWiFiVoipToggler --network host --name FritzGuestWiFiVoipToggler --env-file .env
+docker run -d ghcr.io/bongijo/fritz-guest-wifi-voip-toggler --network host --name FritzGuestWiFiVoipToggler --env-file .env
 ```
 
 ## 👀 Usage
