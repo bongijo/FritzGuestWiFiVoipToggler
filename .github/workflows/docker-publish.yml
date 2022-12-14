@@ -1,0 +1,40 @@
+name: Docker
+
+on:
+  release:
+    types: [published]
+
+env:
+  # Use docker.io for Docker Hub if empty
+  REGISTRY: ghcr.io
+  # github.repository as <account>/<repo>
+  IMAGE_NAME: ${{ github.repository }}
+  
+  BASE_TAG: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Login against a Docker registry
+      # https://github.com/docker/login-action
+      - name: Log into registry ${{ env.REGISTRY }}
+        uses: docker/login-action@28218f9b04b4f3f62068d7b6ce6ca5b26e35336c
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.CR_PAT }}
+
+      - name: Build and push Docker image
+        run: |
+          docker build . --tag ${{ env.BASE_TAG }}
+          docker tag ${{ env.BASE_TAG }} ${{ env.BASE_TAG }}:${{ github.event.release.tag_name }}
+          docker push ${{ env.BASE_TAG }}:${{ github.event.release.tag_name }}
+          docker push ${{ env.BASE_TAG }}
+
+   
