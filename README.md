@@ -4,23 +4,22 @@
     <img src="./images/logo.png" alt="Logo" width="60%">
   </a>
 
-<br />
+  <br />
 
-<h1 align="center">Fritz Guest WiFi Voip Toggler</h1>
+  <h1 align="center">Fritz Guest WiFi Voip Toggler</h1>
 
-<p>
+  <p>
     Switch on and off your guest wifi just with a call!
   </p>
 
-<img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" />
+  <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" />
   <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" />
   <a href='https://github.com/bongijo/FritzGuestWiFiVoipToggler/releases'>  
-  <img src='https://img.shields.io/github/v/release/bongijo/FritzGuestWiFiVoipToggler?color=%23FDD835&label=version&style=for-the-badge'>
+    <img src='https://img.shields.io/github/v/release/bongijo/FritzGuestWiFiVoipToggler?color=%23FDD835&label=version&style=for-the-badge'>
   </a>
   <a href='https://github.com/bongijo/FritzGuestWiFiVoipToggler/blob/master/LICENSE'>
-  <img src='https://img.shields.io/github/license/bongijo/FritzGuestWiFiVoipToggler?style=for-the-badge'>
+    <img src='https://img.shields.io/github/license/bongijo/FritzGuestWiFiVoipToggler?style=for-the-badge'>
   </a>
-
 </div>
 
 ## 🧰 Getting Started
